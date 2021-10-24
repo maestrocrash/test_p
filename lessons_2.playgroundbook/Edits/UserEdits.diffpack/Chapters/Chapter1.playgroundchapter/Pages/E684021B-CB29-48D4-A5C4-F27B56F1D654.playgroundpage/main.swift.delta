@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>let c = 10 //константа
+
+var d = 0 //переменная
+
+d = 10
+
+print(d)
+
+var cc = d * c
+
+var welcomeMessage: String
+welcomeMessage = "hello"
+
+let three : Int = 3
+let point: Double = 0.14159
+
+let pi = Double(three) + point 
+print(pi)
+
+    //optional
+
+var g: Int = 120
+var s: String? = "World"
+//s = nil
+    //1
+print(s!)
+    //2
+if s != nil {
+    print(s!)
+}else {
+    print("s = nil")
+}
+//3
+if let a = s {
+    print(a)
+}else {
+    print("s = nil")
+}
+
+
+let defaultLunch = "пицца"
+var specialLunch: String?
+
+var myLunch = specialLunch ?? defaultLunch
+
+print(myLunch)
+specialLunch = "пирог"
+myLunch = specialLunch ?? defaultLunch
+print(myLunch)
+
+    //коллекции
+
+    //массив
+var nationalsPark: [String] = ["Акадия", "Зайон", "Гранд"]
+print(nationalsPark[2])
+nationalsPark.append("Бэдлендс")
+nationalsPark.insert("Петрифайд", at: 2)
+
+nationalsPark.removeLast()
+nationalsPark.remove(at: 0)
+print(nationalsPark)
+nationalsPark[0] = "ТЕст"
+print(nationalsPark)
+
+nationalsPark.count
+
+    //словарь
+
+var countries: [String: String] = ["IT":"Италия" , "RU": "Россия", "FR": "Франция"]
+
+print(countries)
+
+let fractions = [0.25:"1/4", 0.5:"1/2"]
+print(countries["IT"])
+
+//countries: String?
+
+if let bigCountries = countries["RUS"] {
+    print("\(bigCountries)")
+}else {
+    print("В словаре нет такого значения")
+}
+
+countries["AU"] = "Австрия"
+print(countries)
+
+countries["IT"] = nil
+print(countries)
+
+countries["FR"] = "France"
+print(countries)
+    //Множество Set
+
+var genres: Set = [countries["IT"], nationalsPark[0], "POP"]
+print(genres.count)
+
+genres.insert("Jazz")
+
+if genres.contains("Funk") {
+    print("Множество содержит ROCK")
+} else {
+    print("Множество НЕ содержит Funk")
+}
+
+//  touhes: Set&lt;Touches&gt;
+//  
+//  if touhes.name == "nameButton" {
+//      
+//  } else touhes.name == "nameButton2" {
+//  
+//  }
+
+var aa: String? = nil
+aa = "Hello"
+print(aa)
+
+if true {
+    
+}else if false {
+    
+}else if false {
+    
+}else{
+    
+}
+
+var a = 5
+var b = 10
+//var s = 
+
+var summa = 10000
+var perscent = 5
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 1990}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

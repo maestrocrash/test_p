@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//составные операторы
+
+var a = 10
+
+a = a + 5
+print(a)
+a -= 5 //a = a - 5
+print(a)
+
+    //логические операторы
+
+    //И
+
+true &amp;&amp; true //true
+true &amp;&amp; false //false
+false &amp;&amp; true //false
+false &amp;&amp; false //false
+
+    //ИЛИ
+
+true || true //true
+true || false //true
+false || true //true
+false || false //false
+
+    //НЕ
+
+    !true //false
+        !false //true
+
+let t = 15
+let r = 7
+
+(t &gt; r) || (t == 5) //true
+
+    //ветвление и выбор
+
+    //if else
+
+if t == 15 {
+    print(t)
+}else if t == 15 {
+    print(t, "15TTT")
+}else if t == 15 {
+    print(t, "15TTT")
+}else if t == 15 {
+    print(t, "15TTT")
+}else if t == 15 {
+    print(t, "15TTT")
+}else if t == 15 {
+    print(t, "15TTT")
+}else if t == 15 {
+    print(t, "15TTT")
+}else if t == 15 {
+    print(t, "15TTT")
+}else if t == 15 {
+    print(t, "15TTT")
+}else if t == 15 {
+    print(t, "15TTT")
+}else if t == 15 {
+    print(t, "15TTT")
+}else if t == 15 {
+    print(t, "15TTT")
+}else {
+    print("Другое число")
+}
+
+//тернарный оператор
+
+t == 15 ? print(t, "ter") : print("ERROR") 
+
+if t == 15 {
+    
+}else {
+    
+}
+
+var h = 100
+var isHeader = false
+
+let w = h + (isHeader ? 20 : 10)
+print(w)
+
+    //switch
+
+let userMark = 2
+
+switch userMark {
+case 1, 2, 3:
+    print("Экзамен не сдан")
+    case 4:
+        print("Хорошо")
+        case 5: 
+            print("Отлично")
+default:
+    print("Студент не пришел")
+}
+
+let level: Character = "A"
+
+switch level {
+case "A":
+    print("All ok")
+    fallthrough
+    case "B":
+        print("Very good")
+        case "C":
+            print("Bad")
+default:
+    break
+}
+
+
+let aa = 15
+let b = 100
+let c = 15
+
+var D = (b * b) - 4 * aa * c
+
+switch aa {
+case 15 where D &gt; 0:
+    print("2 root")
+    case 10 where D == 0:
+        print("1 root")
+default:
+    print("No root")
+}
+
+//циклы
+//for in
+
+var totalSum = 0
+for index in 0...10 {
+    totalSum += index
+        //totalSum = totalSum + index
+}
+print(totalSum)
+
+var musicStyle = ["Rock", "Hip-Hop", "Classical"]
+
+for musicName in musicStyle {
+    print("I love \(musicName)")
+}
+
+var country = ["Россия": "ЕАЭС", "США": "НАТО", "Франция": "ЕС"]
+
+for (countryName, blockName) in country {
+    print("\(countryName) в \(blockName)")
+}
+
+for i in stride(from: 1, through: 10, by: 2) {
+    print(i)
+}
+
+//while
+
+var i = 1
+var resultSumWhile = 0
+
+while i &lt;= 0 {
+    resultSumWhile += i
+    i += 1
+}
+print(resultSumWhile)
+
+var o = 1
+var resultRepeatWhile = 0
+
+repeat {
+    resultRepeatWhile += o
+    o += 1
+} while o &lt;= 0
+print(resultRepeatWhile)
+
+    //функции
+
+func myFirstFunction(firstValue a: Int, b: String, _ value: String) -&gt; Int {
+    let c: String = String(a) + b + value
+    return 10
+}
+
+myFirstFunction(firstValue: 9, b: "90", "89")
+
+
+func printMessage(name: String) -&gt; String {
+    return "Hello, \(name)"
+}
+
+print(printMessage(name: "Максим"))
+print(printMessage(name: "Мария"))
+
+
+func test(arg: (String) -&gt; String) -&gt; String {
+    return "String"
+}
+
+func sum(a: Int, b: Int) -&gt; Int {
+    return a + b
+}
+
+var sumAB = sum(a: 10, b: 14)
+print(sumAB)
+
+var z = 10
+var p = 15
+
+func changeValue(_ a: inout Int, _ b: inout Int) {
+    let tmp = a
+    a = b
+    b = tmp
+}
+
+print(z)
+print(p)
+
+changeValue(&amp;z, &amp;p)
+
+print(z)
+print(p)
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 3155}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

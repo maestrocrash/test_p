@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//lessons_2
+
+import Foundation
+//Уравнение вида ax2 + bx + c = 0
+/*
+let a: Double = 5.0  
+let b: Double = 2
+let c: Double = -3
+
+let x1: Double
+let x2: Double
+let d: Double = b * b - 4 * a * c
+
+if (d &gt; 0) {
+    x1 = -b + sqrt(d) / (2 * a)
+    x2 = -b - sqrt(d) / (2 * a)
+    print("Уравнение имеет 2 корня: х1 = \(x1), x2 = \(x2)")
+} else if (d == 0) {
+    x1 = -b / (2 * a)
+    print("Уравнение имеет 1 корень:  x1 = \(x1)")
+} else {
+    print("Нет действительных корней")
+}
+
+////  Даны катеты треугольника. Найти площадь, периметр и гипотенузу
+let catet1 = 8
+let catet2 = 13
+
+var hypotenuse = sqrt(Double(catet1*catet1 + catet2*catet2))
+hypotenuse = Double(round(hypotenuse*100)/100)
+
+let perimeter = Double(catet1) + Double(catet2) + hypotenuse
+
+let square = Double(catet1 * catet2) / 2
+
+print("При заданных катетах  \(catet1) и \(catet2)  гипотенуза равна \(hypotenuse), периметр равен \(perimeter), площадь равна \(square)")
+
+////Третье задание
+var summa: Double = 100
+var procent: Double = 10
+summa = summa + (summa * procent / 100);
+summa += (summa * procent / 100);
+summa += (summa * procent / 100);
+summa += (summa * procent / 100);
+summa += (summa * procent / 100);
+
+print("Через пять лет вклад будет = \(summa)")
+    */
+ func solveQuadricEquatuion(a: Double, b: Double, c:Double) -&gt; String {
+ let d = b*b - 4*a*c
+ var c: String = ""
+ 
+ if d &lt; 0 {
+    c = "Уравнение не имеет действительный корней!"
+ } else if d == 0 {
+    let x = -b/(2 * a)
+    c = "Уравнение имеет один действительный корень: \(x)"
+ } else {
+    let x1 = (-b + sqrt(d))/(2 * a)
+    let x2 = (-b - sqrt(d))/(2 * a)
+    c = "Уравнение имеет два действительных корня: \(x1) и \(x2)"
+ }
+    return c
+ }
+ 
+ func calculateRightTriangleInfo(a: Double, b: Double) {
+ let c = sqrt(a * a + b * a)
+ let perimeter = a + b + c
+ let square = (a * b)/2
+ 
+ print("Гипотенуза: \(c)")
+ print("Периметр: \(perimeter)")
+ print("Площадь: \(square)")
+ }
+ 
+ func calculateDeposit(initialDeposit: Double, rate: Double, time: Int=5)  {
+ var deposit = initialDeposit
+    
+ for _ in 1...time {
+ deposit += (deposit/100) * rate
+ }
+ 
+ print("Сумма вклада через \(time) лет: \(deposit)")
+ }
+
+ 
+ //1. Решить квадратное уравнение.
+ solveQuadricEquatuion(a: 2, b:5, c:-3)
+ solveQuadricEquatuion(a: 1, b:2, c:1)
+ solveQuadricEquatuion(a: 1, b:0, c:5)
+ 
+ //2. Даны катеты прямоугольного треугольника. Найти площадь, периметр и гипотенузу треугольника.
+ print("\n")
+ calculateRightTriangleInfo(a: 5, b: 7)
+ 
+ //3. *Пользователь вводит сумму вклада в банк и годовой процент. Найти сумму вклада через 5 лет.
+ print("\n")
+ 
+ calculateDeposit(initialDeposit: 1000, rate: 4)
+ calculateDeposit(initialDeposit: 1000, rate: 3, time: 10)
+ 
+    
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 2679}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
